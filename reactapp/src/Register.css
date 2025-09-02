@@ -1,0 +1,99 @@
+/* Fullscreen */
+.Register-page {
+  height: 100vh;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background:url('https://imgs.search.brave.com/0_orCc3x_w1Ij4o7H2ZqC7fMUKCe2CTFNYC_HnvGExw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTIy/NDE5MzYyNi9waG90/by9jb21tdW5pdHkt/YW5kLWhlYWx0aC13/b3JrZXJzLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1OVzcx/WE04VzVpUWJUVTdr/bTBISmhUT2tTWVZf/UmU2VkNuWUp3eXA4/ZlJVPQ') 
+    no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.regform {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  width: 90%;         /* takes 90% of the screen width */
+  max-width: 800px;   /* but never grows beyond 800px */
+  text-align: center;
+  margin: 0 0;     /* keeps it centered */
+}
+
+
+/* Heading */
+.regform h2 {
+  margin: 0 0 10px;
+  color: #1f2937;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Input fields */
+.regform input {
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  background: #f9fafb;
+  transition: all 0.3s ease;
+  
+}
+
+.regform input:focus {
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+  outline: none;
+}
+
+/* Gradient button */
+.regform button {
+  padding: 14px;
+  background: linear-gradient(135deg, #6366f1, #2563eb);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.regform button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+}
+
+.regform button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Login link */
+.member {
+display: inline-block;
+justify-content: center;
+align-items: center ;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #374151;
+}
+
+p a {
+  color: #000204;
+  font-weight: 5001;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
