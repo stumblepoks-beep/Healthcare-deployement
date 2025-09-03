@@ -1,10 +1,17 @@
 /* External Libs*/
 import express from 'express';
 import cors from 'cors';
+import path from 'path'; 
+import { fileURLToPath } from 'url';
 //middleware
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+app.use(express.static(path.join(__dirname, './reactapp/dist')));
+
 //Controllers
 import login from './controllers/login.js';
 import {getHomePage,postHomePage} from './controllers/homePage.js';
@@ -31,6 +38,10 @@ app.post('/api/register',register);
 app.get('/api/healthconditions',auth,getHealthConditions).post('/api/healthconditions',auth,postHealthConditions).delete('/api/healthconditions',auth,deleteHealthCondition);
 app.get('/api/medications',auth,getMedications).post('/api/medications',auth,postMedications).delete('/api/medications',auth,deleteMedication);
 app.get('/api/details',auth,getDetails);
+
+app.use((req, res) => {
+  res.sendFile(path.join(__dirname, './reactapp/dist/index.html'));
+});
 
 const port = parseInt(process.env.PORT) || 3000;
 app.listen(port, () => {
