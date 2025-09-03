@@ -3,7 +3,7 @@ import axios from 'axios';
 const apiget = async (url)=>{
     const token = localStorage.getItem("token");
     try {
-        const response = await axios.get(`http://localhost:3000${url}/`,
+        const response = await axios.get(`https://healthcare-deployement.onrender.com${url}/`,
           {
             headers:{Authorization: `Bearer ${token}`}
           }
@@ -18,7 +18,7 @@ const apiget = async (url)=>{
 const apipost = async (url,data)=>{
     const token = localStorage.getItem("token");
     try {
-        const response = await axios.post(`http://localhost:3000${url}`,data,
+        const response = await axios.post(`https://healthcare-deployement.onrender.com${url}`,data,
           {
             headers:{Authorization: `Bearer ${token}`}
           }
@@ -34,7 +34,7 @@ const apidelete = async (url,data)=>{
     const token = localStorage.getItem("token");
     console.log(data);
     try {
-        const response = await axios.delete(`http://localhost:3000${url}/`,
+        const response = await axios.delete(`https://healthcare-deployement.onrender.com${url}/`,
           {
             headers:{Authorization: `Bearer ${token}`},
             data

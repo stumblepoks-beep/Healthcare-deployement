@@ -18,7 +18,7 @@ function Register(){
       lastName:  document.querySelector('.lname').value
     }
      try {
-      const response = await axios.post("http://localhost:3000/api/register", formData);
+      const response = await axios.post("https://healthcare-deployement.onrender.com/api/register", formData);
       if(response.data.success == 'true'){
         setregister("Registration success!");
         setLoading(false);

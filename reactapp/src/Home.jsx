@@ -7,7 +7,7 @@ import { useLoading } from './LoadingContext';
 const apiget = async (url) => {
   const token = localStorage.getItem("token");
   try {
-    const response = await axios.get(`http://localhost:3000${url}`, {
+    const response = await axios.get(`https://healthcare-deployement.onrender.com${url}`, {
       headers: { Authorization: `Bearer ${token}` }
     });
     return response.data;
@@ -19,7 +19,7 @@ const apiget = async (url) => {
 const apiPost = async (url, Data) => {
   const token = localStorage.getItem("token");
   try {
-    const response = await axios.post(`http://localhost:3000${url}`, Data, {
+    const response = await axios.post(`https://healthcare-deployement.onrender.com${url}`, Data, {
       headers: { Authorization: `Bearer ${token}` }
     });
     return response.data;

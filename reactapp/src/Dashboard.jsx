@@ -12,44 +12,6 @@ import ecg from "./assets/ecg.svg";
 import pill from "./assets/pill.svg";
 import { useLoading } from "./LoadingContext";
 
-// const apiget = async (url)=>{
-//     const token = localStorage.getItem("token");
-//     try {
-//         const response = await axios.get(`http://localhost:3000${url}`,
-//           {
-//             headers:{Authorization: `Bearer ${token}`}
-//           }
-//       )
-//         console.log(response.data);
-//         return response.data;
-//     } catch (error) {
-//         handleError(error);
-//     }
-// }
-
-// const handleError = (error)=>{
-//     if(error.response){
-//         if(error.response.status == 401){
-//             console.error("❌ 401 Unauthorized → redirecting to login");
-//             alert("Session TimedOut Login Again");
-//             window.location.href = "/login";
-//         }
-//         else if(error.response.status == 403){
-//             console.error("❌ 403 Forbidden → access denied");
-//             console.error("Server Response:", error.response.data); 
-//             alert("Session Timedout Login Again");
-//             window.location.href = "/login";
-//         }
-//         else{
-//             console.error(`⚠️ ${error.response.status}:`, error.response.data)
-//         }
-//     }
-//     else {
-//         console.error("⚠️ Network/Server error:", error.message);
-//     }
-//     throw error;
-// }
-
 export default function Dashboard(){
   const [conditions, setConditions] = useState([]);
   const [medications, setMedications] = useState([]);

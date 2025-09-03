@@ -10,7 +10,7 @@ app.use(express.json());
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-app.use(express.static(path.join(__dirname, './reactapp/dist')));
+app.use(express.static(path.join(__dirname, '../reactapp/dist')));
 
 //Controllers
 import login from './controllers/login.js';
