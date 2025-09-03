@@ -40,7 +40,7 @@ app.get('/api/medications',auth,getMedications).post('/api/medications',auth,pos
 app.get('/api/details',auth,getDetails);
 
 app.use((req, res) => {
-  res.sendFile(path.join(__dirname, './reactapp/dist/index.html'));
+  res.sendFile(path.join(__dirname, '../reactapp/dist/index.html'));
 });
 
 const port = parseInt(process.env.PORT) || 3000;
