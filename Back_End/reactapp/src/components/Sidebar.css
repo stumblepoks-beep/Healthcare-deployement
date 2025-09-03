@@ -1,0 +1,104 @@
+.sidebar {
+  width: 230px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  background: #F9FAFB;
+  padding: 10px;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  width: 30px;
+  height: 30px;
+}
+
+header h2 {
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.collapse-btn {
+  background: white;
+  border: none;
+  border-radius: 5px;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  width: auto;
+  margin-top: 7px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color .1s;
+
+}
+.collapse-btn:hover{
+  background-color: #0984e3;
+}
+
+.sideBox {
+  display: flex;
+  align-items: center;
+  margin: 7px 0;
+}
+
+.sideBox img {
+  width: 30px;
+  height: 30px;
+}
+
+.heading{
+    display: grid;
+}
+.sidebarheading{
+    display: flex;
+    grid-row: 1fr 1fr 1fr;
+}
+.button-content{
+    display: grid;
+    padding: 0px;
+}
+.space{
+    padding-left: 10px;
+}
+
+.sidebar-button {
+  background: none;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;  /* Change from flex-start to center */
+  justify-content: flex-start;
+  padding-right: 10px;
+  width: 110%;
+  height: 40px;
+  padding: 8px;  /* Some spacing for clickable area */
+  cursor: pointer;
+}
+
+.sidebar.collapsed .sidebar-button {
+  justify-content: center; /* Center icon when collapsed */
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar.collapsed .space {
+  display: none; /* Hide the text completely */
+}
